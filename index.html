@@ -158,7 +158,7 @@
     ].join('\n');
 
     document.write('</head>\n<body>\n' + kHeader + '\n<div class="container">\n' +
-                     snippets.map(commandmentMarkup).join('\n') + '\n</div></body>\n');
+                     kCommandments.map(commandmentMarkup).join('\n') + '\n</div></body>\n');
 
     function commandmentMarkup(line, index) {
       return "  <p class='card-panel'>\n" +
