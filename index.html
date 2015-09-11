@@ -60,77 +60,116 @@
       document.write('<script type="text/javascript" src="' + name + '">');
       document.writeln('</\u0073cript>');
     }
+
+    var kCommandments = [
+      "Fix your attention on yourself, be aware in each instant of what you think, feel, desire, and do",
+      "Always finish what you start",
+      "Do what you are doing, as best as possible",
+      "Do not attach yourself to anything that will destroy you in the long run",
+      "Develop your generosity, without witnesses",
+      "Treat each person as if they were a close relative",
+      "Bring order to what you have disordered",
+      "Learn to receive, and thank each blessing",
+      "Stop defining yourself",
+      "Do not lie, nor steal. If you do, you lie and steal from yourself",
+      "Help others without making them dependent",
+      "Do not wish to be imitated",
+      "Make plans for work, and follow through",
+      "Do not take up too much space",
+      "Do not make unnecessary noises or gestures",
+      "If you don’t already have it, imitate faith",
+      "Do not be impressed with strong personalities",
+      "Do not rule over anyone or anything",
+      "Share equally",
+      "Do not seduce",
+      "Eat and sleep what is strictly necessary",
+      "Do not speak about your personal problems",
+      "Do not judge nor criticize when you do not know the majority of the facts",
+      "Do not create useless friendships",
+      "Do not follow trends",
+      "Do not sell yourself",
+      "Honor the contracts you have signed",
+      "Be punctual",
+      "Do not be envious of the goods or successes of others",
+      "Speak only what is necessary",
+      "Think not of the benefits that will come from your works",
+      "Never threaten",
+      "Keep your promises",
+      "In any discussion, put yourself in the other’s place",
+      "Admit there is always someone better",
+      "Do not eliminate, but transform",
+      "Conquer your fears, each one of them is a camouflaged desire",
+      "Help others help themselves",
+      "Defeat your aversions and get closer to people you wish to reject",
+      "Do not react to whatever good or bad that people speak of you",
+      "Transform your pride into dignity",
+      "Transform your anger into creativity",
+      "Transform your greed into respect for beauty",
+      "Transform your envy into admiration for the values of others",
+      "Transform your hate into charity (love)",
+      "Neither praise nor insult yourself",
+      "Treat what does not belong to you, as if it belonged to you",
+      "Do not complain",
+      "Unfold your imagination",
+      "Do not give orders for the pleasure of being obeyed",
+      "Pay for the services you are given",
+      "Do not make propaganda of your acts or ideas",
+      "Do not attempt to make others feel pity, admiration, sympathy, or suggestion towards you",
+      "Do not attempt to distinguish yourself through your appearance",
+      "Never contradict, only be silent",
+      "Do not indebt yourself, attain and pay up",
+      "If you offend someone, ask forgiveness. If you offend publicly, ask forgiveness in public",
+      "If you discover you have said wrongly, do not insist through pride on that error, and immediately stop what you propose",
+      "Do not defend your old ideas just because it was you who announced them",
+      "Do not hold on to useless objects",
+      "Do not adorn yourself with foreign ideas",
+      "Do not take pictures with famous people",
+      "Be your own judge",
+      "Never define yourself by what you possess",
+      "Never speak about yourself without admitting the possibility of changing",
+      "Accept that nothing is yours",
+      "When someone asks for your opinion on someone or something, only give their qualities",
+      "When you are ill, instead of condemning the ill, consider it your teacher",
+      "Never look with slyness, look clearly",
+      "Never forget the dead, but grant them a limited space that prevents them from invading your life",
+      "In the place where you live, always reserve a space for the sacred",
+      "When you provide a service, do not exalt your efforts",
+      "If you decide to work for others, do it with pleasure",
+      "If you can’t decide between doing and not doing, take a risk and do",
+      "Do not try to be everything for your partner, let them seek in others what you cannot give them",
+      "When someone has an audience, do not try to contradict them and rob their audience",
+      "Live with money that you earned",
+      "Do not boast of romantic affairs",
+      "Do not boast of your weaknesses",
+      "Never visit someone just to use up time",
+      "Attain so you can share",
+      "If you are meditating and a devil appears, make him meditate"
+    ];
+
+    var kHeader = [
+      "<div class='navbar-fixed m1'>",
+      "  <nav class='nav-wrapper blue lighten m1 s1'>",
+      "    <center>",
+      "      <h4>Commandments</h4>",
+      "      <p class='blue darken-1 m0'>The 82 Commandments of Alejandro Jodorowsky</p>",
+      "    </center>",
+      "  </nav>",
+      "</div>"
+    ].join('\n');
+
+    document.write('</head>\n<body>\n' + kHeader + '\n<div class="container">\n' +
+                     snippets.map(commandmentMarkup).join('\n') + '\n</div></body>\n');
+
+    function commandmentMarkup(line, index) {
+      return "  <p class='card-panel'>\n" +
+               "    " + ++index + ". " + line + ".\n" +
+             "  </p>\n";
+    }
+
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   </head>
 
   <body>
-    <div class="navbar-fixed m1">
-      <nav class="nav-wrapper blue lighten m1 s1">
-        <center>
-          <h4><a href="https://github.com/caitp/oath" title="The Oath on GitHub">The Oath</a></h4>
-          <p class="blue darken-1 m0">I swear to fulfill, to the best of my ability and judgment, this covenant:</p>
-        </center>
-      </nav>
-    </div>
-    <div class="container">
-    <p class="card-panel">
-      I will respect the hard-won scientific gains of those engineers in whose
-      steps I walk, and gladly share such knowledge as is mine with those who
-      are to follow.
-    </p>
-
-    <p class="card-panel">
-      I will apply, for the benefit of the user and maintainer, all measures
-      which are required, avoiding those twin traps of premature optimization
-      and poor code coverage.
-    </p>
-
-    <p class="card-panel">
-      I will remember that there is art to medicine as well as science, and that
-      warmth, sympathy, and understanding may outweigh my own selfish need to
-      defend code I hacked together hours before.
-    </p>
-
-    <p class="card-panel">
-      I will not be ashamed to say "I know not," nor will I fail to call in my
-      colleagues when the skills of another are needed for fixing a difficult bug.
-    </p>
-
-    <p class="card-panel">
-      I will respect the privacy of my users, for their problems are not disclosed
-      to me that the world may know. Most especially must I tread with care in
-      matters of security, finance, and interpersonal matters. If it is given me
-      to save a user from being compromised, all thanks. But it may also be within
-      my power to hand over a user's information to authorities; this awesome
-      responsibility must be faced with great humbleness and awareness of my own
-      frailty. Above all, I must not play at God.
-    </p>
-
-    <p class="card-panel">
-      I will remember that I do not treat a stack overflow, or a slow application,
-      but a human being, whose broken software may affect the person's family and
-      economic stability. My responsibility includes these related problems, if I
-      am to care adequately for my users.
-    </p>
-
-    <p class="card-panel">
-      I will prevent bugs whenever I can, for prevention is preferable to fixing.
-    </p>
-
-    <p class="card-panel">
-      I will remember that I remain a member of society, with special obligations
-      to all my fellow human beings, those sound of mind and body as well as the
-      infirm. Being a hacker does not mean I must be a jerk to anyone, nor to be
-      insecure and weak.
-    </p>
-
-    <p class="card-panel">
-      If I do not violate this oath, may I enjoy life and art, respected while I
-      live and remembered with affection thereafter. May I always act so as to
-      preserve the finest traditions of my calling and may I long experience the
-      joy of creating, teaching, and fixing bugs for those who seek my help.
-    </p>
-    </div>
   </body>
 </html>
